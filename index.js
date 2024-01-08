@@ -4,6 +4,8 @@ const cors = require('cors')
 //middleware
 app.use(express.json())
 app.use(cors())
+app.use(express.static('dist'))
+
 const requestlogger = (req, res, next)=>{
     console.log('METHOD', req.method)
     console.log('PATH', req.path)
